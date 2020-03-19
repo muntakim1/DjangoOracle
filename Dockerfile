@@ -17,6 +17,6 @@ RUN yum -y update && yum -y upgrade &&  yum -y install oracle-release-el7 && yum
 
 ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
-CMD ["python3 ", "manage.py runserver 0.0.0.0:8000"]
+CMD ["source", "./start.sh"]
 
 
