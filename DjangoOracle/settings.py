@@ -25,7 +25,7 @@ SECRET_KEY = 't=c18oa*0chadk)lp(=fj*ye$r!zef6#bacw5=c!4q19b2^^gd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -75,8 +75,10 @@ WSGI_APPLICATION = 'DjangoOracle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': '192.168.2.5:49161/xe',
+	'USER': 'system',
+	'PASSWORD': 'oracle',
     }
 }
 
