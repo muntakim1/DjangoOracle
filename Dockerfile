@@ -6,7 +6,7 @@ WORKDIR /opt/
 
 ADD . /opt/
 
-ARG release=18
+ARG release=19
 ARG update=5
 
 RUN yum -y update && yum -y upgrade &&  yum -y install oracle-release-el7 && yum-config-manager --enable ol7_oracle_instantclient && \
