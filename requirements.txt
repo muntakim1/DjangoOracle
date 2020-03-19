@@ -1,4 +1,2 @@
 django==1.11
-cx_oracle==7
-
-
+cx_Oralce
